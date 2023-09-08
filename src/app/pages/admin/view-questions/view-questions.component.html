@@ -1,0 +1,68 @@
+<div class="mt-20">
+  <div class="flex" style="justify-content: space-between">
+    <h1 class="mt-20 ml-10 title">Questions of {{ qTitle }} :</h1>
+    <button
+      [routerLink]="'/admin/add-question/' + q_id + '/' + qTitle"
+      class="add-questions"
+    >
+      Add Questions
+    </button>
+  </div>
+  <div class="bootstrap-wrapper">
+    <div class="row">
+      <div class="col-md-12">
+        <mat-card
+          *ngFor="let q of questions; let i = index"
+          class="cards mt-20"
+        >
+          <mat-card-content>
+            <p class="questions">
+              <b>Q{{ i + 1 }}]</b>
+              <span class="ml-10" [innerHTML]="q.content"></span>
+            </p>
+
+            <div class="conatiner-fluid options">
+              <div class="row">
+                <div class="col-md-6">
+                  <p class="ml-20 mt-10">
+                    <b class="mr-20">1)</b> {{ q.option_1 }}
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <p class="ml-20 mt-10">
+                    <b class="mr-20">2)</b> {{ q.option_2 }}
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <p class="ml-20 mt-10">
+                    <b class="mr-20">3)</b> {{ q.option_3 }}
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <p class="ml-20 mt-10">
+                    <b class="mr-20">4)</b> {{ q.option_4 }}
+                  </p>
+                </div>
+              </div>
+
+              <mat-divider class="mt-10 mb-10 divider"></mat-divider>
+              <div class="flex">
+                <div class="col-md-4">
+                  <p class="answer"><b>Correct Answer : </b>{{ q.answer }}</p>
+                </div>
+                <div style="margin-left: 50px" class="col-md-6">
+                  <button class="mt-2">Update</button>
+                  <button class="mt-2" (click)="deleteQuestion(q.ques_Id)">
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

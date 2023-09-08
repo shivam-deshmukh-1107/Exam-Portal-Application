@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+html,
+body {
+  height: 100%;
+  background-color: #24252a !important;
+}
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.ml-20 {
+  margin-left: 20px !important;
+}
+.mr-20 {
+  margin-right: 20px !important;
+}
+.mt-20 {
+  margin-top: 20px !important;
+}
+.mb-20 {
+  margin-bottom: 20px !important;
+}
+
+.ml-10 {
+  margin-left: 10px !important;
+}
+.mr-10 {
+  margin-right: 10px !important;
+}
+.mt-10 {
+  margin-top: 10px !important;
+}
+.mb-10 {
+  margin-bottom: 10px !important;
+}
+
+.flex {
+  display: flex;
+}

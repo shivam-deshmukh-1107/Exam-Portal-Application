@@ -1,0 +1,65 @@
+<div class="bootstrap-wrapper">
+  <div class="container-fluid">
+    <div class="row mt-20">
+      <h1 class="mt-20 ml-10" style="color: #fff">
+        <b>Avalilable Quizzes :</b>
+      </h1>
+      <mat-divider class="mt-10 mb-10 divider"></mat-divider>
+      <div class="col-md-4" *ngFor="let q of quizzes">
+        <mat-card class="mt-20 mb-20 mat-card">
+          <div class="flex">
+            <img class="quiz_logo" src="../../../../assets/quiz.png" alt="" />
+
+            <div>
+              <mat-card-title class="title">
+                <h1>{{ q.title }}</h1>
+              </mat-card-title>
+
+              <mat-card-header class="header">
+                <mat-card-subtitle>{{ q.category.title }}</mat-card-subtitle>
+              </mat-card-header>
+            </div>
+          </div>
+
+          <mat-divider></mat-divider>
+
+          <mat-card-content class="content">
+            <p class="truncate">{{ q.description }}</p>
+          </mat-card-content>
+          <mat-card-actions class="actions">
+            <div class="flex">
+              <div class="col-md-4 text-center">
+                <button mat-raised-button style="color: #702cf4">View</button>
+                <button
+                  [routerLink]="'/user-dashboard/instructions/' + q.q_id"
+                  mat-raised-button
+                  color="warn"
+                  class="mt-20"
+                >
+                  Start
+                </button>
+              </div>
+              <div class="col-md-8 text-center">
+                <button mat-raised-button>
+                  Questions: {{ q.number_of_questions }}
+                </button>
+
+                <button mat-raised-button class="mt-20">
+                  Max Marks: {{ q.max_marks }}
+                </button>
+              </div>
+            </div>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+
+      <div class="col-md-12" *ngIf="quizzes.length == 0">
+        <mat-card>
+          <mat-card-content>
+            <h1>No quizzes in this Category</h1>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

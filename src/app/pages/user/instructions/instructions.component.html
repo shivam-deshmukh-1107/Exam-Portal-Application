@@ -1,0 +1,70 @@
+<div class="bootstrap-wrapper">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <mat-card class="mt-20" *ngIf="quiz">
+          <!-- heading -->
+          <mat-card-header class="mb-10">
+            <mat-card-title style="font-size: 25px">
+              <b>Read the Instructions Carefully !!</b>
+            </mat-card-title>
+          </mat-card-header>
+          <!-- Content -->
+          <mat-card-content>
+            <mat-divider class="mb-10"></mat-divider>
+            <h1>{{ quiz.title }}</h1>
+            <p>{{ quiz.description }}</p>
+            <mat-divider class="mb-10"></mat-divider>
+            <h2>Quiz Instructions :</h2>
+            <ul>
+              <li>
+                The quizzes consists of questions carefully designed to help you
+                self-assess your comprehension of the information presented on
+                the topics covered in the module. No data will be collected on
+                the website regarding your responses or how many times you take
+                the quiz.
+              </li>
+              <li>
+                Each question in the quiz is of multiple-choice or "true or
+                false" format. Read each question carefully, and click on the
+                button next to your response that is based on the information
+                covered on the topic in the module. Each correct or incorrect
+                response will result in appropriate feedback immediately at the
+                bottom of the screen.
+              </li>
+              <li>
+                After responding to a question, click on the "Next Question"
+                button at the bottom to go to the next question. After
+                responding to the last question, click on "Close" on the top of
+                the window to exit the quiz. You have to submit the quiz in
+                <b>{{ quiz.number_of_questions * 2 }} minutes</b>.
+              </li>
+              <li>
+                If you select an incorrect response for a question, you can try
+                again until you get the correct response. If you retake the
+                quiz, the questions and their respective responses will be
+                randomized.
+              </li>
+              <li>
+                There are <b>{{ quiz.number_of_questions }} Questions</b> in
+                this quiz. The total score for the quiz is based on your
+                responses to all questions.Each question carries
+                <b>{{ quiz.max_marks / quiz.number_of_questions }} Marks</b>. If
+                you respond incorrectly to a question or retake a question again
+                and get the correct response, your quiz score will reflect it
+                appropriately. However, your quiz will not be graded, if you
+                skip a question or exit before responding to all the questions.
+              </li>
+            </ul>
+            <mat-divider class="mb-10"></mat-divider>
+          </mat-card-content>
+          <mat-card-actions class="btn mb-10">
+            <button (click)="startQuiz()" mat-raised-button color="warn">
+              Start Quiz
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

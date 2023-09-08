@@ -1,0 +1,21 @@
+<div class="header">
+  <a routerLink="/" class="logo">Quizio</a>
+
+  <div class="btn">
+    <a *ngIf="!isLoggedIn" routerLink="/login" type="submit">
+      <button>Login</button></a
+    >
+    <a *ngIf="!isLoggedIn" routerLink="/signup" type="submit">
+      <button>Sign Up</button></a
+    >
+    <!-- ------------------------------------------------------------ -->
+    <a *ngIf="isLoggedIn && user" routerLink="/admin/profile" type="submit">
+      <button>
+        {{ user["username"] }}
+      </button>
+    </a>
+    <a (click)="logout()" *ngIf="isLoggedIn" type="submit">
+      <button>Logout</button>
+    </a>
+  </div>
+</div>

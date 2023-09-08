@@ -1,0 +1,78 @@
+<mat-card class="card">
+  <h1 class="title ml-20 mt-20"><b style="color: #fff">Update Quiz :</b></h1>
+  <mat-divider class="divider mb-20"></mat-divider>
+  <mat-card-content>
+    <div class="add-category">
+      <div class="wrapper">
+        <form *ngIf="quiz" (ngSubmit)="update_quiz()">
+          <div class="input-box">
+            <mat-label>Enter Title</mat-label>
+            <input
+              [(ngModel)]="quiz.title"
+              type="text"
+              name="title"
+              placeholder="Enter Title"
+              required
+            />
+          </div>
+          <div>
+            <mat-label>Enter Description</mat-label>
+            <textarea
+              [(ngModel)]="quiz.description"
+              type="text"
+              name="description"
+              placeholder="Enter here"
+              rows="5"
+            ></textarea>
+          </div>
+          <div class="input-box options">
+            <div class="col-md-6">
+              <!-- Max Marks -->
+              <mat-label>Enter Max Marks</mat-label>
+              <input
+                [(ngModel)]="quiz.max_marks"
+                type="text"
+                name="max_marks"
+                placeholder="Enter here"
+                required
+              />
+              <!-- Number of questions -->
+              <mat-label>Enter Number of Questions</mat-label>
+              <input
+                [(ngModel)]="quiz.number_of_questions"
+                type="text"
+                name="N=number_of_questions"
+                placeholder="Enter here"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <!-- Catregory -->
+              <mat-label>Quiz Category</mat-label>
+              <mat-select
+                name="category"
+                [(ngModel)]="quiz.category.c_Id"
+                required
+              >
+                <mat-option *ngFor="let c of categories" [value]="c.c_Id">
+                  {{ c.title }}
+                </mat-option>
+              </mat-select>
+              <!-- Active Field -->
+              <div class="slider">
+                <mat-label>Publish Status</mat-label>
+                <mat-slide-toggle
+                  name="active"
+                  [(ngModel)]="quiz.active"
+                  color="#0088a9"
+                >
+                </mat-slide-toggle>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn">Update Quiz</button>
+        </form>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

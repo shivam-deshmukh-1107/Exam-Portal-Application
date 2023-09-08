@@ -1,0 +1,18 @@
+<mat-card class="card">
+  <mat-action-list>
+    <div mat-subheader class="title"><b>Categories :</b></div>
+    <mat-divider class="mt-10 mb-10 divider"></mat-divider>
+    <button routerLink="/user-dashboard/0" mat-list-item>
+      <fa-icon [icon]="file" class="icon"></fa-icon>
+      <span>All Quizzes</span>
+    </button>
+    <button
+      [routerLink]="'/user-dashboard/' + c.c_Id"
+      mat-list-item
+      *ngFor="let c of categories"
+    >
+      <fa-icon [icon]="quiz" class="icon"></fa-icon>
+      <span>{{ c.title }}</span>
+    </button>
+  </mat-action-list>
+</mat-card>

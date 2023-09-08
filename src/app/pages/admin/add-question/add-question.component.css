@@ -1,0 +1,107 @@
+.card {
+  margin-top: 20px;
+  border: 4px solid #0088a9;
+  border-radius: 25px;
+  background-color: #24252a;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #0088a9;
+}
+.sub-title {
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+  margin: 0;
+}
+
+.divider {
+  background-color: #0088a9;
+  height: 2px;
+}
+
+.add-category {
+  display: flex;
+  /* justify-content: center; */
+  min-height: 60vh;
+}
+
+.wrapper {
+  width: 100%;
+  color: white;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 15px 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 45px 20px 20px;
+}
+
+textarea {
+  width: 100%;
+  background: transparent;
+  outline: none;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder,
+textarea::placeholder {
+  color: #fff;
+}
+.options {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+.options input {
+  height: 50px;
+  margin-block: 10px;
+}
+
+mat-select {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 11px 45px 10px 20px;
+}
+
+button {
+  padding: 9px 25px;
+  width: 100%;
+  margin-top: 30px;
+  font-size: 30px;
+  background-color: #24252a;
+  color: #fff;
+  border: 2px solid #0088a9;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}

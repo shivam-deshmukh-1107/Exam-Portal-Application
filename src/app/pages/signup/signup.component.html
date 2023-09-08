@@ -1,0 +1,91 @@
+<div class="bootstrap-wrapper">
+  <div class="container-fluid background">
+    <div class="row">
+      <div class="home">
+        <div class="text-center">
+          <img src="../../../assets/AI.png" id="robot" />
+        </div>
+        <div class="content">
+          <div class="login">
+            <div class="wrapper">
+              <form (ngSubmit)="formSubmit()">
+                <!-- Username -->
+                <div class="input-box">
+                  <input
+                    [(ngModel)]="user.username"
+                    type="text"
+                    name="username"
+                    placeholder="Username"
+                    required
+                  />
+                </div>
+
+                <!-- Password -->
+                <div class="input-box">
+                  <input
+                    [(ngModel)]="user.password"
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    required
+                  />
+                </div>
+
+                <!-- Firstname -->
+                <div class="input-box">
+                  <input
+                    [(ngModel)]="user.firstname"
+                    type="text"
+                    name="firstname"
+                    placeholder="Firstname"
+                    required
+                  />
+                </div>
+
+                <!-- Lastname -->
+                <div class="input-box">
+                  <input
+                    [(ngModel)]="user.lastname"
+                    type="text"
+                    name="lastname"
+                    placeholder="Lastname"
+                    required
+                  />
+                </div>
+
+                <!-- Email -->
+                <div class="input-box">
+                  <input
+                    [(ngModel)]="user.email"
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+
+                <!-- Phone Number -->
+                <div class="input-box">
+                  <input
+                    [(ngModel)]="user.phone"
+                    type="number"
+                    name="phone"
+                    placeholder="Phone Number"
+                    required
+                  />
+                </div>
+
+                <button type="submit" class="btn">Sign Up</button>
+                <div class="register-link">
+                  <p>
+                    Already have an account? <a routerLink="/login">Login</a>
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+<mat-card class="card">
+  <h1 class="title mt-20 ml-20">Profile Details :</h1>
+  <mat-divider class="divider mb-10"></mat-divider>
+  <mat-card-content>
+    <div class="bootstrap-wrapper">
+      <div class="container">
+        <div class="container text-center">
+          <img
+            src="https://icon-library.com/images/default-user-icon/default-user-icon-13.jpg"
+            class="profile_img"
+          />
+          <h1 class="name" *ngIf="user">
+            {{ user["firstname"] }} {{ user["lastname"] }}
+          </h1>
+        </div>
+        <div class="row">
+          <div class="col-md-10 offset-md-1">
+            <!-- Table details -->
+            <table class="table">
+              <tr>
+                <td>Username</td>
+                <td *ngIf="user">{{ user["username"] }}</td>
+              </tr>
+              <tr>
+                <td>UserID</td>
+                <td *ngIf="user">EXAM_{{ user["id"] }}</td>
+              </tr>
+              <tr>
+                <td>Phone No.</td>
+                <td *ngIf="user">{{ user["phone"] }}</td>
+              </tr>
+              <tr>
+                <td>Role</td>
+                <td *ngIf="user">{{ user["authorities"][0]["authority"] }}</td>
+              </tr>
+              <tr>
+                <td>Status</td>
+                <td *ngIf="user">
+                  {{ user["enabled"] ? "ACTIVE" : "NOTACTIVE" }}
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

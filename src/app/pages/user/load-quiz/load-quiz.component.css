@@ -1,0 +1,40 @@
+.mat-card {
+  padding: 10px;
+}
+
+.mat-card .header {
+  padding: 0;
+}
+.title h1 {
+  margin-bottom: 0;
+}
+
+.content {
+  padding: 0;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.truncate {
+  display: block;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.quiz_logo {
+  width: 30px;
+  margin: 15px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+}
+
+.divider {
+  background-color: #0088a9;
+  height: 2px;
+}
