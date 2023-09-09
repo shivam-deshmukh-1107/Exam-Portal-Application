@@ -56,7 +56,7 @@
             </div>
           </div>
           <div class="input-box">
-            <mat-label class="ml-20">Select Category: </mat-label>
+            <mat-label class="ml-20">Select Answer: </mat-label>
             <mat-select name="answer" required [(ngModel)]="question.answer">
               <mat-option *ngIf="question.option_1" [value]="question.option_1"
                 >{{ question.option_1 }}
@@ -72,7 +72,7 @@
               </mat-option>
             </mat-select>
           </div>
-          <button type="submit" class="btn">Add Category</button>
+          <button type="submit" class="btn">Add Question</button>
         </form>
       </div>
     </div>
