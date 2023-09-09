@@ -35,7 +35,7 @@ export class ViewQuestionsComponent implements OnInit {
       (data: any) => {
         this.questions = data;
       },
-      (error) => {
+      (error: any) => {
         console.log(error);
       }
     );
@@ -56,7 +56,7 @@ export class ViewQuestionsComponent implements OnInit {
             this.questions = this.questions.filter((q) => q.ques_Id != q_id);
             Swal.fire('Success !!', 'Question Deleted !!', 'success');
           },
-          (error) => {
+          (error: any) => {
             console.log(error);
             Swal.fire('Error !!', 'Error deleting Question !!', 'error');
           }

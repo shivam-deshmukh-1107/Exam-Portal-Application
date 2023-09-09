@@ -31,7 +31,7 @@ export class ViewQuizzesComponent implements OnInit {
       (data: any) => {
         this.quizzes = data;
       },
-      (error) => {
+      (error: any) => {
         console.log(error);
         Swal.fire('Error !!', 'Error in Loading Data !', 'error');
       }
@@ -52,7 +52,7 @@ export class ViewQuizzesComponent implements OnInit {
             this.quizzes = this.quizzes.filter((quiz) => quiz.q_id != q_id);
             Swal.fire('Success !!', 'Quiz Deleted !!', 'success');
           },
-          (error) => {
+          (error: any) => {
             console.log(error);
             Swal.fire('Error !!', 'Error deleting Quiz !!', 'error');
           }

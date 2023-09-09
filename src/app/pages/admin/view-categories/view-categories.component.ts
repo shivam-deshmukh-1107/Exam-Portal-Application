@@ -28,7 +28,7 @@ export class ViewCategoriesComponent implements OnInit {
         // css
         this.categories = data;
       },
-      (error) => {
+      (error: any) => {
         console.log(error);
         Swal.fire('Error !!', 'Error loading Data', 'error');
       }
@@ -51,7 +51,7 @@ export class ViewCategoriesComponent implements OnInit {
             );
             Swal.fire('Success !!', 'Category Deleted !!', 'success');
           },
-          (error) => {
+          (error: any) => {
             console.log(error);
             Swal.fire('Error !!', 'Error deleting Category !!', 'error');
           }

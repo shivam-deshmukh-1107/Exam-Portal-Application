@@ -36,7 +36,7 @@ export class UpdateQuizComponent implements OnInit {
         this.quiz = data;
         console.log(data);
       },
-      (error) => {
+      (error: any) => {
         console.log(error);
       }
     );
@@ -46,7 +46,7 @@ export class UpdateQuizComponent implements OnInit {
         // Loading Categories
         this.categories = data;
       },
-      (error) => {
+      (error: any) => {
         console.log(error);
         Swal.fire('Error !!', 'Error loading Categories', 'error');
       }
@@ -79,7 +79,7 @@ export class UpdateQuizComponent implements OnInit {
           this._router.navigate(['/admin/quizzes']);
         });
       },
-      (error) => {
+      (error: any) => {
         Swal.fire('Error !!', "Error updating Quiz !!, 'error");
         console.log(error);
       }
