@@ -1,27 +1,51 @@
-# Examfront
+# **Exam Portal Application**
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+The Exam Portal Application is a web-based platform built with Angular, Spring Boot, and PostgreSQL, designed for managing and taking quizzes. It includes two main parts: Admin and User, with role-based access control and authentication.
 
-## Development server
+**Application Live Url:** https://astonishing-flan-9eee3b.netlify.app/
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
+### Admin:
+- **Category Management:** Admins can add, edit, and delete different categories, such as Programming Quizzes, Quantitative Quizzes, Verbal Quizzes, General Knowledge Quizzes, etc.
+- **Quiz Management:** Admins can create quizzes within categories. Each quiz stores multiple questions, but only a specified number of questions are randomly displayed based on the total marks and number of questions input for the quiz.
+- **Question Management:** Admins can add, update, and delete questions associated with quizzes.
 
-## Code scaffolding
+### User:
+- **Category Navigation:** Users can explore different categories of quizzes and select any active quiz to attempt.
+- **Quiz Attempt:** After selecting a quiz, users are presented with an instruction page followed by the quiz. The quiz page is divided into two parts: the question display and a timer. The timer is calculated based on the number of questions and total marks for that quiz.
+- **Automatic Submission:** Quizzes are automatically submitted when the timer expires.
+- **Role-Based Dashboard:** Users are presented with either the Admin Dashboard or User Dashboard based on their authentication roles. Unauthorized users cannot access these dashboards or any associated content.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologies Used
+- **Frontend:** Angular, Angular Material, Bootstrap, Bootstrap Grid CSS, jQuery, ngx-ui-loader, SweetAlert2, TypeScript
+- **Backend:** Spring Boot, JSON Web Tokens (JWT), Spring Security
+- **Database:** PostgreSQL
 
-## Build
+## Prerequisites
+>Before running the application, make sure you have the following installed:
+- **IDE:** IntelliJ IDEA
+- **Frontend IDE:** Visual Studio Code
+- **Database Management Tool:** PgAdmin 4
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Deployment
+The backend application is deployed on _Render_, which includes the associated database in PostgreSQL. The frontend Angular part is deployed using _Netlify_.
+>Please note that the free-tier deployments may result in slower loading times, but the application is fully functional.
 
-## Running unit tests
+## Access the Application
+You can access the deployed application at the following URL: [ExamPortal](https://astonishing-flan-9eee3b.netlify.app/)
+>New users can register on the signup page and once registered, they can log in and attempt quizzes.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Usage
+- Access the Admin Dashboard by logging in as an admin user.
+- Access the User Dashboard by logging in as a regular user.
+- Follow the on-screen instructions to manage categories, quizzes, and questions (Admin) or take quizzes (User).
 
-## Running end-to-end tests
+## License
+This project is licensed under the MIT License.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Contact
+If you have any questions or issues, please feel free to contact shivamsdeshmukh1107@gmail.com.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
