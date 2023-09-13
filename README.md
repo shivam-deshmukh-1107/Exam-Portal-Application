@@ -15,6 +15,10 @@ The Exam Portal Application is a web-based platform built with Angular, Spring B
 - **Quiz Attempt:** After selecting a quiz, users are presented with an instruction page followed by the quiz. The quiz page is divided into two parts: the question display and a timer. The timer is calculated based on the number of questions and total marks for that quiz.
 - **Automatic Submission:** Quizzes are automatically submitted when the timer expires.
 - **Role-Based Dashboard:** Users are presented with either the Admin Dashboard or User Dashboard based on their authentication roles. Unauthorized users cannot access these dashboards or any associated content.
+- **User Entity Diagram**
+![user_entity_diagram](https://github.com/shivam-deshmukh-1107/Examportal-Backend-Server/assets/143519202/2a540952-5d61-474f-89f4-cd9d92a6298d)
+- **Quiz Entity Diagram**
+![Quiz_entity_diagram](https://github.com/shivam-deshmukh-1107/Examportal-Backend-Server/assets/143519202/d98f7847-3bb7-466e-8b14-8a91adbf87ce)
 
 ## Technologies Used
 - **Frontend:** Angular, Angular Material, Bootstrap, Bootstrap Grid CSS, jQuery, ngx-ui-loader, SweetAlert2, TypeScript
